@@ -7,7 +7,7 @@
 - **Card Momento do Cuidado** (pet fofo em casa, close): `momento/jamie-street-...` (cão na caminha com plantas). Alternativas: `momento/sarandy-westfall-...` (pug no sofá), `momento/madalyn-cox-...` (cão + gato na janela).
 - **Cuidadores em destaque** (3 avatares): faces limpas são escassas no lote. Melhores rostos: `pessoas/evan-wise-...` (homem), `pessoas/vitalii-...` (mulher) e `momento/valerie-elash-...` ou `momento/severin-demchuk-...`. Se não convencer, manter as iniciais (M/R/B) por enquanto.
 - **Depoimentos** (2 rostos): `pessoas/vitalii-...` e `momento/severin-demchuk-...`.
-- **Serviços** (opcional): `servicos/ayla-...` (vet domiciliar), `servicos/matt-nelson-...` (passeio), `servicos/petr-...` (adestramento). Não há foto de banho nem tosa no lote.
+- **Serviços**: `servicos/ayla-...` (vet domiciliar), `servicos/matt-nelson-...` (passeio), `servicos/petr-...` (adestramento), `servicos/ottr-dan-...` (banho) e `servicos/reba-spike-...` (tosa). Todos os 6 cards de serviço da landing têm foto (Cuidado no lar usa `servicos/chewy-dOTIcvV1Ck4-...`).
 
 ## hero/ (8) — tutor + pet, acolhedor, horizontal
 - `artem-beliaikin-...` Mulher beijando um beagle no colo em parque ensolarado, luz dourada.
@@ -37,7 +37,7 @@
 - `valerie-elash-...` Mulher de óculos erguendo e abraçando um samoieda branco ao ar livre.
 - `willian-justen-...` Filhote de gato brincando com ratinho de brinquedo num arranhador, casa clara.
 
-## servicos/ (7) — pet em banho/passeio/vet/adestramento
+## servicos/ (9) — pet em banho/passeio/vet/adestramento
 - `alexander-mass-...` Dachshund examinado por mãos com luvas em clínica (frio/clínico).
 - `ayla-verschueren-...` Filhote recebendo remédio na seringa no chão de casa (vet domiciliar).
 - `chewy-dOTIcvV1Ck4-...` Mulher oferecendo petiscos a dois cães atentos (adestramento/rotina).
@@ -45,6 +45,8 @@
 - `matt-nelson-...` Passeador com quatro cães na guia numa praça urbana (passeio).
 - `oleksandr-horbach-...` Cão de colete em obstáculo de agility ao entardecer (adestramento, luz fria).
 - `petr-...` Shiba dando a patinha e recebendo petisco num gramado (adestramento).
+- `ottr-dan-...` Cão ensaboado na banheira, azulejo claro (banho). Enviada pelo Brendon depois do lote inicial.
+- `reba-spike-...` Gato persa sendo tosado com máquina por profissional (tosa). Enviada pelo Brendon depois do lote inicial.
 
 ## pessoas/ (2) — rostos visíveis (avatar de cuidador/depoimento)
 - `evan-wise-...` Homem ruivo sorridente no sofá com dois border collies, interno.
@@ -61,3 +63,6 @@
 - `david-taffet-...` Dois cães agitados com dentes à mostra (agressivo, off-brand).
 - `jonas-vincent-...` Duplicata exata do arquivo com `(1)` em momento/.
 - `silvana-carlos-...` Foto P&B dramática e fria (fora do tom quente da marca).
+
+## raiz — avulsas
+- `pexels-pet-foto-644780685-17880521.jpg` Spitz branco sorrindo em estúdio (Pexels). É a "Nina" do card Momento do Cuidado do hero (recorte cabeça+peito).
