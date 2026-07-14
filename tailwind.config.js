@@ -38,6 +38,7 @@ export default {
         ink: {
           300: '#A7ADA5',
           500: '#7B837C',
+          muted: '#5B5A4E',
           700: '#45514C',
           900: '#2A332F',
         },
