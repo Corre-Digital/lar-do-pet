@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Icon } from '@/components/ui/icon'
 import { MomentoCard } from '@/components/brand/momento-card'
 import { HERO } from '@/lib/content'
+import { scrollToWaitlist } from '@/lib/waitlist'
 
 export function Hero() {
   return (
@@ -22,7 +23,14 @@ export function Hero() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               {HERO.ctas.map((c) => (
-                <Button key={c.label} variant={c.variant} size="lg" iconLeft={c.icon} className="sm:w-auto">
+                <Button
+                  key={c.label}
+                  variant={c.variant}
+                  size="lg"
+                  iconLeft={c.icon}
+                  className="sm:w-auto"
+                  onClick={scrollToWaitlist}
+                >
                   {c.label}
                 </Button>
               ))}

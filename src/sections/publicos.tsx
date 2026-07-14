@@ -1,6 +1,7 @@
 import { PUBLICOS } from '@/lib/content'
 import { Container, Kicker } from '@/components/ui/ui'
 import { Button } from '@/components/ui/button'
+import { scrollToWaitlist } from '@/lib/waitlist'
 
 export function DoisPublicos() {
   const { tutores, cuidadores } = PUBLICOS
@@ -12,7 +13,7 @@ export function DoisPublicos() {
           <Kicker className="text-teal-100">{tutores.kicker}</Kicker>
           <h3 className="mt-3 font-display text-[1.75rem] font-bold text-white">{tutores.title}</h3>
           <p className="mt-3 text-[15px] leading-relaxed text-teal-50">{tutores.text}</p>
-          <Button variant="onDark" iconLeft="search" className="mt-6">
+          <Button variant="onDark" iconLeft="search" className="mt-6" onClick={scrollToWaitlist}>
             {tutores.cta}
           </Button>
         </div>
@@ -22,7 +23,7 @@ export function DoisPublicos() {
           <Kicker>{cuidadores.kicker}</Kicker>
           <h3 className="mt-3 font-display text-[1.75rem] font-bold text-ink-900">{cuidadores.title}</h3>
           <p className="mt-3 text-[15px] leading-relaxed text-ink-700">{cuidadores.text}</p>
-          <Button variant="primary" iconLeft="paw-print" className="mt-6">
+          <Button variant="primary" iconLeft="paw-print" className="mt-6" onClick={scrollToWaitlist}>
             {cuidadores.cta}
           </Button>
         </div>
