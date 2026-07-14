@@ -2,10 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =========================================================================
+   Lar do Pet · Tokens do Design System
+   Fonte de verdade: handoff do Claude Design (tokens/*.css).
+   Mantidos em sincronia com tailwind.config.js (mesmos valores hex).
+   Componentes podem consumir por utilitário Tailwind (bg-teal-500) ou pela
+   variável CSS (var(--teal-500)) — os dois apontam para o mesmo valor.
+   ========================================================================= */
 @layer base {
   :root {
-    --radius: 0.9rem;
+    color-scheme: light;
+
+    /* — Teal · marca — cor-assinatura (wordmark) — */
+    --teal-50:  #ECF4F1;
+    --teal-100: #D8EAE4;
+    --teal-200: #BCDBD1;
+    --teal-300: #93C3B8;
+    --teal-400: #62A597;
+    --teal-500: #3B8A7C;  /* primária · wordmark */
+    --teal-600: #2F7064;  /* botão / ação */
+    --teal-700: #255A50;  /* texto / hover */
+    --teal-900: #183F38;
+
+    /* — Âmbar · ação e hover — o traço quente do logo — */
+    --amber-100: #F9E7CE;
+    --amber-300: #F0C894;
+    --amber-500: #E0A45C;  /* acento */
+    --amber-600: #C6843C;  /* hover profundo */
+
+    /* — Dourado · pássaro — realce decorativo — */
+    --gold-100: #FBF3D4;
+    --gold-300: #F3E7AE;
+    --gold-500: #E7CF6E;
+
+    /* — Neutros quentes — creme e tinta — */
+    --cream:      #F4F0E2;  /* fundo padrão, nunca branco puro */
+    --cream-deep: #EDE7D6;
+    --white:      #FFFFFF;
+    --ink-900: #2A332F;     /* texto forte */
+    --ink-700: #45514C;     /* corpo */
+    --ink-500: #7B837C;     /* secundário / muted */
+    --ink-300: #A7ADA5;
+    --line:       #E6E0D2;  /* bordas */
+    --line-soft:  #EFEBDD;
+
+    /* — Estados semânticos (mornos e suaves) — */
+    --success: #3B8A7C; --success-bg: #D8EAE4;
+    --warning: #C6843C; --warning-bg: #F9E7CE;
+    --danger:  #C96A5C; --danger-bg:  #F6E1DC;
+    --info:    #4E93A0; --info-bg:    #E1EEF0;
+
+    /* — Aliases semânticos (prefira estes nos componentes) — */
+    --bg: var(--cream);
+    --bg-deep: var(--cream-deep);
+    --surface: var(--white);
+    --surface-2: var(--teal-50);
+    --surface-sunken: var(--cream-deep);
+    --text: var(--ink-900);
+    --text-muted: var(--ink-500);
+    --text-body: var(--ink-700);
+    --text-faint: var(--ink-300);
+    --text-on-primary: #FFFFFF;
+    --text-on-accent: #FFFFFF;
+    --primary: var(--teal-500);
+    --primary-strong: var(--teal-600);
+    --primary-ink: var(--teal-700);
+    --primary-soft: var(--teal-100);
+    --primary-wash: var(--teal-50);
+    --accent: var(--amber-500);
+    --accent-strong: var(--amber-600);
+    --accent-soft: var(--amber-100);
+    --highlight: var(--gold-500);
+    --border: var(--line);
+    --border-strong: #D8D2BF;
+    --focus-ring: color-mix(in oklab, var(--teal-500) 45%, transparent);
+    --link: var(--teal-700);
+    --link-hover: var(--amber-600);
+
+    /* — Tipografia — Quicksand (títulos) · Nunito (corpo) — */
+    --font-display: 'Quicksand', 'Nunito', system-ui, sans-serif;
+    --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
+    --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600; --fw-bold: 700; --fw-heavy: 800;
+    --fs-display: 3.25rem; --fs-h1: 2.125rem; --fs-h2: 1.625rem; --fs-h3: 1.25rem; --fs-h4: 1.125rem;
+    --fs-lg: 1.25rem; --fs-body: 1.125rem; --fs-ui: 1rem; --fs-sm: 0.875rem; --fs-xs: 0.8125rem;
+    --lh-tight: 1.2; --lh-snug: 1.25; --lh-body: 1.5;
+    --ls-tight: -0.01em; --ls-wide: 0.04em; --ls-caps: 0.08em;
+
+    /* — Espaço (base 4px) — */
+    --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px;
+    --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px; --space-16: 64px;
+    --space-20: 80px; --space-24: 96px;
+
+    /* — Raios — generosos e arredondados (marca: "todas as vértices arredondadas") — */
+    --radius-xs: 6px; --radius-sm: 10px; --radius-md: 14px; --radius-lg: 20px;
+    --radius-xl: 28px; --radius-2xl: 36px; --radius-pill: 999px;
+    --radius: 0.9rem; /* compat shadcn */
+
+    /* — Sombras — suaves, quentes, difusas — */
+    --shadow-xs: 0 1px 2px rgba(58, 74, 70, 0.06);
+    --shadow-sm: 0 2px 8px rgba(58, 74, 70, 0.07);
+    --shadow-md: 0 8px 24px rgba(44, 114, 104, 0.10);
+    --shadow-lg: 0 16px 40px rgba(44, 114, 104, 0.12);
+    --shadow-focus: 0 0 0 4px var(--focus-ring);
+
+    /* — Movimento — gentil, "singela" — */
+    --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+    --dur-fast: 140ms; --dur: 220ms; --dur-slow: 380ms;
+
+    /* — Contêiner — */
+    --container: 1200px;
+    --container-narrow: 780px;
   }
+
+  *, *::before, *::after { box-sizing: border-box; }
 
   html {
     -webkit-font-smoothing: antialiased;
@@ -15,4 +125,6 @@
   body {
     @apply bg-cream font-sans text-ink-900;
   }
+
+  ::selection { background: var(--teal-200); color: var(--ink-900); }
 }

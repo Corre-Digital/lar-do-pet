@@ -38,7 +38,7 @@ export default function App() {
     <div className="min-h-screen">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <div className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-teal-500 text-white">
+          <span className="grid h-9 w-9 place-items-center rounded-lg bg-teal-500 text-white">
             <PawPrint className="h-5 w-5" />
           </span>
           <Wordmark />
@@ -72,7 +72,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-line bg-white p-8 shadow-sm">
+          <div className="rounded-lg border border-line bg-white p-8 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-wide text-ink-500">
               Cuidado no lar, para
             </p>
@@ -80,7 +80,7 @@ export default function App() {
               {especies.map(({ icon: Icon, label }) => (
                 <div
                   key={label}
-                  className="flex flex-col items-center gap-2 rounded-xl bg-cream py-5"
+                  className="flex flex-col items-center gap-2 rounded-lg bg-cream py-5"
                 >
                   <Icon className="h-8 w-8 text-teal-600" />
                   <span className="text-sm font-semibold text-ink-700">{label}</span>
@@ -95,8 +95,8 @@ export default function App() {
 
         <section className="grid gap-6 py-12 md:grid-cols-3">
           {pilares.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="rounded-2xl border border-line bg-white p-7">
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-teal-50">
+            <div key={title} className="rounded-lg border border-line bg-white p-7">
+              <span className="grid h-12 w-12 place-items-center rounded-lg bg-teal-50">
                 <Icon className="h-6 w-6 text-teal-700" />
               </span>
               <h3 className="mt-4 font-display text-xl font-semibold text-ink-900">{title}</h3>
