@@ -34,14 +34,27 @@ Deploy no Cloudflare Pages: build command `npm run build`, output `dist`. O arqu
 ## Estrutura
 
 ```
-public/           favicon e _redirects (SPA)
+public/
+  images/           fotos da landing (hero, momento, serviços, avatares)
+  logo-emblem.svg   emblema da marca
+  favicon.svg, _redirects (SPA)
 src/
-  components/ui/  componentes shadcn (Button)
-  lib/            utils (cn)
-  App.tsx         landing inicial
-  index.css       Tailwind mais base da marca
+  sections/         uma seção da landing por arquivo (header, hero, servicos,
+                    comofunciona, momento, cuidadores, seguranca, publicos,
+                    historias, faq, cta, footer)
+  components/
+    ui/             primitivos (button, icon, ui: Container/SectionHead/Badge/Chip/Logo)
+    brand/          momento-card (a assinatura da marca)
+  lib/
+    content.ts      TODO o copy e dados da landing (fonte de verdade única)
+    utils.ts        cn
+  App.tsx           compõe as seções
+  index.css         Tailwind mais tokens/base da marca
 tailwind.config.js  tokens de cor e tipografia da marca
 ```
+
+A landing espelha a versão unificada do Figma (merge das duas propostas). Todo o
+copy e os dados vivem em `src/lib/content.ts`; as seções só consomem de lá.
 
 ## Marca
 
@@ -49,4 +62,4 @@ Paleta e tipografia vêm do guia de marca no Figma e do doc de design system no 
 
 ## Status
 
-Fundação (kickoff 2026-07-13). Landing inicial com a marca. Próximos passos: auth (Supabase), busca de cuidador, perfil do cuidador e o fluxo do "Momento do Cuidado".
+Landing completa (12 seções) espelhando a landing unificada do Figma, responsiva (desktop e mobile), com as fotos escolhidas. Próximos passos: fotos reais de produção (as atuais são de banco), otimizar o `logo-emblem.svg`, e depois o app (auth Supabase, busca e perfil de cuidador, fluxo do "Momento do Cuidado").
