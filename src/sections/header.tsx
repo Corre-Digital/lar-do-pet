@@ -3,6 +3,7 @@ import { Container, Logo } from '@/components/ui/ui'
 import { Button } from '@/components/ui/button'
 import { Icon } from '@/components/ui/icon'
 import { NAV } from '@/lib/content'
+import { scrollToWaitlist } from '@/lib/waitlist'
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -19,7 +20,7 @@ export function Header() {
         </nav>
         <div className="ml-auto hidden items-center gap-3 lg:flex">
           <Button variant="ghost" size="sm">Entrar</Button>
-          <Button variant="primary" size="sm" iconLeft="paw-print">Criar conta</Button>
+          <Button variant="primary" size="sm" iconLeft="paw-print" onClick={scrollToWaitlist}>Criar conta</Button>
         </div>
         <button
           className="ml-auto grid h-11 w-11 place-items-center text-teal-700 lg:hidden"
@@ -40,7 +41,7 @@ export function Header() {
             ))}
             <div className="mt-2 flex flex-col gap-2">
               <Button variant="secondary" size="md" fullWidth>Entrar</Button>
-              <Button variant="primary" size="md" fullWidth iconLeft="paw-print">Criar conta</Button>
+              <Button variant="primary" size="md" fullWidth iconLeft="paw-print" onClick={() => { setOpen(false); scrollToWaitlist() }}>Criar conta</Button>
             </div>
           </Container>
         </div>

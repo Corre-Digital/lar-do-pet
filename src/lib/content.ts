@@ -121,7 +121,22 @@ export const FAQ = {
 export const CTA = {
   frase: 'A tranquilidade de saber que tudo está bem.',
   title: 'Com quem eu deixo meu pet?',
-  sub: 'Com alguém que ama animais tanto quanto você. Cadastre-se de graça e encontre o cuidador certo para o seu pet.',
+  sub: 'Com alguém que ama animais tanto quanto você. Estamos chegando: deixe seu e-mail e seja avisado assim que abrir.',
+}
+
+// Fake door: lista de espera (browser -> Supabase, sem servidor nosso)
+export const WAITLIST = {
+  chips: [
+    { label: 'Sou tutor', source: 'tutor' },
+    { label: 'Quero ser cuidador', source: 'cuidador' },
+  ],
+  placeholder: 'seu@email.com',
+  button: 'Entrar na lista',
+  sending: 'Enviando…',
+  ok: 'Você está na lista! Avisamos assim que abrir.',
+  jaInscrito: 'Esse e-mail já está na lista. Em breve a gente se fala!',
+  invalido: 'Confira o e-mail digitado.',
+  erro: 'Não deu certo agora. Tente de novo em instantes.',
 }
 
 export const FOOTER = {
