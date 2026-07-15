@@ -45,6 +45,7 @@ export function CtaFinal() {
             </h2>
             <p className="mt-3 text-lg text-teal-50">{CTA.sub}</p>
 
+            <div aria-live="polite">
             {state === 'ok' && !error ? (
               <p className="mx-auto mt-8 flex max-w-md items-center justify-center gap-2.5 rounded-full bg-white/15 px-6 py-4 text-base font-bold text-white">
                 <Icon name="check-circle" size={22} className="shrink-0 text-gold-500" />
@@ -94,8 +95,16 @@ export function CtaFinal() {
                   </button>
                 </div>
                 {error && <p className="mt-3 text-sm font-semibold text-gold-300">{error}</p>}
+                <p className="mt-4 text-[13px] text-teal-100">
+                  Ao enviar, você concorda com a{' '}
+                  <a href="/privacidade" className="font-bold underline underline-offset-2 hover:text-white">
+                    Política de Privacidade
+                  </a>
+                  .
+                </p>
               </form>
             )}
+            </div>
           </div>
         </div>
       </Container>
